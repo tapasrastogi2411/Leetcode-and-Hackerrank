@@ -1,3 +1,5 @@
+package Easy_Difficulty.Two_Sum;
+
 /*
 
 Link to Problem: https://leetcode.com/problems/two-sum/
