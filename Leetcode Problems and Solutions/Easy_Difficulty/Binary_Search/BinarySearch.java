@@ -10,7 +10,7 @@ package Easy_Difficulty.Binary_Search;
 
 public class BinarySearch {
     
-    public static boolean performBinarySearch(int [] array, int targetVariable){
+    public int search(int[] nums, int target){
 
         System.out.println("Go to main function");
         return true;
