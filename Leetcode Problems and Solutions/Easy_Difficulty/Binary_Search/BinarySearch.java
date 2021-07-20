@@ -10,11 +10,28 @@ package Easy_Difficulty.Binary_Search;
 
 public class BinarySearch {
     
-    public static boolean performBinarySearch(int [] array, int targetVariable){
+    public static int performBinarySearch(int [] nums, int target){
 
-        System.out.println("Go to main function");
-        return true;
+        int rightIndex = nums.length - 1;
+        int leftIndex = 0;
 
+        while (leftIndex <= rightIndex) {
+
+            int middleIndex = (leftIndex + rightIndex) / 2;
+            
+            if (nums[middleIndex] == target) {
+                return middleIndex;
+                
+            } else if (nums[middleIndex] < target) {
+                leftIndex = middleIndex - 1;
+                
+            } else {
+                rightIndex = middleIndex + 1;
+            }
+
+        }
+        
+        return -1;
     }
 
     
