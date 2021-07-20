@@ -10,7 +10,7 @@ package Easy_Difficulty.Binary_Search;
 
 public class BinarySearch {
     
-    public static int performBinarySearch(int [] nums, int target){
+    public int performBinarySearch(int [] nums, int target){
 
         int rightIndex = nums.length - 1;
         int leftIndex = 0;
@@ -30,7 +30,6 @@ public class BinarySearch {
             }
 
         }
-        
         return -1;
     }
 
