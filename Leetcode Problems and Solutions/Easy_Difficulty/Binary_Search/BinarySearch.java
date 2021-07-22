@@ -13,31 +13,39 @@ public class BinarySearch {
     public int performBinarySearch(int [] nums, int target){
 
         int rightIndex = nums.length - 1;
+
         int leftIndex = 0;
 
         while (leftIndex <= rightIndex) {
 
             int middleIndex = (leftIndex + rightIndex) / 2;
-            
+
             if (nums[middleIndex] == target) {
                 return middleIndex;
-                
             } else if (nums[middleIndex] < target) {
-                leftIndex = middleIndex - 1;
-                
+                leftIndex = middleIndex + 1;
             } else {
-                rightIndex = middleIndex + 1;
+                rightIndex = middleIndex - 1;
             }
-
         }
         return -1;
+
     }
 
     
 
 public static void main(String[] args) {
 
-    System.out.println("There will be a day");
+    int[] inputList = {-1, 0, 3, 5, 9, 12};
+    int target = 9;
+
+    BinarySearch bSearch = new BinarySearch();
+    System.out.println("Dude what");
+    int output = bSearch.performBinarySearch(inputList, target);
+
+    System.out.println(output);
+
+    
     
 }
 
