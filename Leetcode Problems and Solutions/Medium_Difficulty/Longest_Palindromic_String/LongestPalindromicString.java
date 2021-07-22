@@ -1,3 +1,5 @@
+package Medium_Difficulty.Longest_Palindromic_String;
+
 import java.util.HashMap;
 
 /**
