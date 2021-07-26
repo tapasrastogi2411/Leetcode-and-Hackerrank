@@ -11,7 +11,27 @@ from typing import List, Tuple, Dict
 
 # importing the module
 import timeit
-  
+
+
+def maxProfitV2(prices: List[int]) -> int:
+
+    max_profit = 0
+    buy_price_to_consider = prices[0]
+
+    if len(prices) < 2:
+        return 0
+    
+    for price_index in range(1, len(prices)):
+
+        if(prices[price_index] < buy_price_to_consider):
+            buy_price_to_consider = prices[price_index]
+        
+        elif prices[price_index] > buy_price_to_consider:
+            profit = prices[price_index] - buy_price_to_consider
+            max_profit = max(profit, max_profit)
+
+        
+    return max_profit
 
 def maxProfit(prices: List[int]) -> int:
     
@@ -36,7 +56,6 @@ def maxProfit(prices: List[int]) -> int:
     pass
 
 # Testing
+input_prices = [1, 2]
 
-input_prices = [10000,9999,9998,9997,9996,9995,9994,9993,9992,9991,9990,9989,9988,9987,9986,9985,9984,9983,9982,9981,9980]
-
-print(maxProfit(input_prices))
+print(maxProfitV2(input_prices))
