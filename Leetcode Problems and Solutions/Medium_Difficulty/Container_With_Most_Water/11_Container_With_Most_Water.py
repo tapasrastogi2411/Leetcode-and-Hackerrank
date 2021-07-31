@@ -31,10 +31,43 @@ def maxArea(height: List[int]) -> int:
                 max_area = area
     
     return max_area
+
+# Trying out an O(N), one pass solution using only one loop
+
+def maxAreaVersion2(height: List[int]):
+
+    max_area = 0
+
+    # Using a two pointer approach here, where we continue till left_pointer == right_pointer
+    left_pointer = 0
+    right_pointer = len(height) - 1
     
+    # While these two pointers havent crossed
+    while(left_pointer < right_pointer):
+        # Calculate the area, and then just move the smaller of the two pointers. We move the height that is constraining us, that is the smaller value out of the two
+
+        # We shift the smaller of the two pointers towards the middle, since that gives us a better chance of increasing the height of the container
+
+        # Getting the dimensions of the container
+        width_of_container = right_pointer - left_pointer
+        height_of_container = min(height[left_pointer], height[right_pointer])
+
+        # Computing the area
+        area = height_of_container * width_of_container
+        max_area = max(max_area, area)
+
+        # Updating left and right pointer
+        if height[left_pointer] < height[right_pointer]:
+            left_pointer += 1
+
+        elif height[right_pointer] <= height[left_pointer]:
+            right_pointer -= 1
+
+        # else if they are equal, we can move either of the two pointers 
+        
+    return max_area      
 
 # Testing
-
 input_height = [1,8,6,2,5,4,8,3,7]
 
-print(maxArea(input_height))
+print(maxAreaVersion2(input_height))
