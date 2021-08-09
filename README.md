@@ -10,12 +10,12 @@ Problems that I have solved:
 
 - Easy Difficulty
 
-  1) Best Time to Buy and Sell stocks
-  2) Binary Search
-  3) Fibonacci Number
-  4) Number of Good Pairs
-  5) Two Sum
-  6) Valid Parenthesis
+  1) [Best Time to Buy and Sell stocks](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Easy_Difficulty/Best_Time_To_Buy_And_Sell_Stocks)
+  2) [Binary Search](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Easy_Difficulty/Binary_Search)
+  3) [Fibonacci Number](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Easy_Difficulty/Fibonacci_Number)
+  4) [Number of Good Pairs](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Easy_Difficulty/Number_of_Good_Pairs)
+  5) [Two Sum](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Easy_Difficulty/Two_Sum)
+  6) [Valid Parenthesis](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Easy_Difficulty/Valid_Parenthesis)
 
 - Medium Medium Difficulty
 
