@@ -15,22 +15,115 @@ struct ListNode
     struct ListNode *next;
 };
 
+struct ListNode *initialiser(int val)
+{
 
-struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2){
-    return;
+    struct ListNode *newNode = (struct ListNode *)malloc(sizeof(struct ListNode));
+    newNode->val = val;
+    newNode->next = NULL;
+}
+
+struct ListNode *addAtHead(struct ListNode *head, struct ListNode *nodeToInsert){
+    nodeToInsert -> next = head;
+    return nodeToInsert;
+
+}
+
+void printList(struct ListNode *head){
+    struct ListNode *temp = head;
+    while(temp != NULL){
+        printf("%d  ", temp -> val);
+        temp = temp -> next;
+    }
+    printf("\n");
+}
+
+struct ListNode *addTwoNumbers(struct ListNode *l1, struct ListNode *l2)
+{
+
+    struct ListNode *result = initialiser(0);
+    struct ListNode *dummy = result;
+
+    int carry = 0;
+    int l1_val, l2_val;
+
+    
+    printList(l1);
+    printList(l2);
+    while (l1 != NULL || l2 != NULL)
+    {
+
+        if (l1 != NULL)
+        {
+            l1_val = l1->val;
+        }
+
+        else
+        {
+            l1_val = 0;
+        }
+
+        if (l2 != NULL)
+        {
+            l2_val = l2->val;
+        }
+        else
+        {
+            l2_val = 0;
+        }
+
+        int sum = carry + l1_val + l2_val;
+            carry = sum / 10;
+        int last_digit = sum % 10;
+
+
+        dummy -> next = initialiser(last_digit);
+        dummy = dummy -> next;
+
+        if (l1 != NULL)
+        {
+            l1 = l1->next;
+        }
+        if (l2 != NULL)
+        {
+            l2 = l2->next;
+        }
+    }
+
+    if(carry > 0){
+        dummy -> next = initialiser(carry);
+        dummy = dummy -> next;
+    }
+
+    return result -> next;
 }
 
 int main()
 {
-    struct ListNode *node1 = NULL;
-    struct ListNode *node2 = NULL;
-    struct ListNode *nodeResult = NULL;
+    struct ListNode *head1 = NULL;
+    struct ListNode *head2 = NULL;
 
-    nodeResult = addTwoNumbers(node1, node2);
+    struct ListNode *result = NULL;
+    
+    struct ListNode *head1Node1 = initialiser(2);
+    struct ListNode *head1Node2 = initialiser(4);
+    struct ListNode *head1Node3 = initialiser(3);
 
-    while(nodeResult != NULL){
-        printf("%d ", nodeResult -> val);
-        nodeResult = nodeResult -> next;
-    }
+    struct ListNode *head2Node1 = initialiser(5);
+    struct ListNode *head2Node2 = initialiser(6);
+    struct ListNode *head2Node3 = initialiser(4);
+
+    head1 = addAtHead(head1,head1Node3);
+    head1 = addAtHead(head1, head1Node2);
+    head1 = addAtHead(head1, head1Node1);
+    
+    head2 = addAtHead(head2, head2Node3);
+    head2 = addAtHead(head2, head2Node2);
+    head2 = addAtHead(head2, head2Node1);
+    
+    result = addTwoNumbers(head1, head2);
+
+    printList(result);
+    
     return 0;
 }
