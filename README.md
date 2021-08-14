@@ -23,6 +23,7 @@ Problems that I have solved:
   2) [Container with Most water](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Container_With_Most_Water)
   3) [Intersection of Two arrays](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/blob/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Intersection_of_Two_Arrays_II/)
   4) [Rotate array](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Rotate_Array)
+  5) [Generate Parenthesis](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Generate_Parenthesis)
 
 - Hard Difficulty 
   1) [Median of Two sorted Arrays](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Hard_Difficulty/Median_of_Two_Sorted_Arrays)
