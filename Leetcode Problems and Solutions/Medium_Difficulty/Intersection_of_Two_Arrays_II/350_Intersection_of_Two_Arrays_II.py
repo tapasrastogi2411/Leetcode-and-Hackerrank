@@ -3,6 +3,8 @@
 
 # Leetcode Problem number 189: Intersection of two Arrays II - Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must appear as many times as it shows in both arrays and you may return the result in any order.
 
+from typing import List, Tuple, Dict
+
 def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
         
     length_of_nums1 = len(nums1)
@@ -16,7 +18,7 @@ def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
             if number in nums2:
                 nums_answer.append(number)
                 nums2.remove(number)
-                    
+                
     else: 
             
         for number in nums2:
