@@ -21,7 +21,7 @@ Problems that I have solved:
 
   1) [3sum](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/3sum)
   2) [Container with Most water](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Container_With_Most_Water)
-  3) [Intersection of Two arrays](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/blob/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Intersection_of_Two_Arrays_II/350_Intersection_of_Two_Arrays_II.py)
+  3) [Intersection of Two arrays](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/blob/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Intersection_of_Two_Arrays_II/)
   4) [Rotate array](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Rotate_Array)
 
 - Hard Difficulty 
