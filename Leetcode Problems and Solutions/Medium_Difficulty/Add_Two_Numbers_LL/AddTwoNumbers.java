@@ -1,5 +1,4 @@
-public class AddTwoNumbers {
-    
+public class AddTwoNumbers {    
     /**
      * InnerAddTwoNumbers
      */
@@ -16,6 +15,19 @@ public class AddTwoNumbers {
             this.val = value;
             this.next = next;
         } 
+    }
+
+    public ListNode head1;
+    public ListNode head2;
+
+    public void printList(ListNode head){
+        ListNode temp = head;
+
+        while(temp != null){
+            System.out.print(temp.val + " ");
+            temp = temp.next;
+        }
+        System.out.println();
     }
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2){
@@ -46,6 +58,7 @@ public class AddTwoNumbers {
 
             int sum = carry + l1_val + l2_val;
             carry = sum / 10;
+
             int last_digit = sum % 10;
 
             ListNode temp = new ListNode(last_digit);
@@ -67,9 +80,27 @@ public class AddTwoNumbers {
             dummy.next = temp;
         }
 
-        return dummy.next;
+        return result.next;
     }
     public static void main(String[] args) {
+
+        AddTwoNumbers linkedList = new AddTwoNumbers();
+
+        linkedList.head1 = new ListNode(2);
+        linkedList.head1.next = new ListNode(4);
+        linkedList.head1.next.next = new ListNode(3);
+
+        linkedList.head2 = new ListNode(5);
+        linkedList.head2.next = new ListNode(6);
+        linkedList.head2.next.next = new ListNode(4);
+
+        ListNode result = linkedList.addTwoNumbers(linkedList.head1, linkedList.head2);
+
+        linkedList.printList(result);
+
+
+
+
 
     }
     
