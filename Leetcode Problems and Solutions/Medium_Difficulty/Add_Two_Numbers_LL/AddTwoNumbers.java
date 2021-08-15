@@ -1,7 +1,7 @@
+package Medium_Difficulty.Add_Two_Numbers_LL;
+
 public class AddTwoNumbers {    
-    /**
-     * InnerAddTwoNumbers
-     */
+    
     public static class ListNode {
 
         int val;
