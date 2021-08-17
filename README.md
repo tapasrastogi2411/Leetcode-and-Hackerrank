@@ -16,18 +16,18 @@ Problems that I have solved:
   4) [Number of Good Pairs](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Easy_Difficulty/Number_of_Good_Pairs)
   5) [Two Sum](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Easy_Difficulty/Two_Sum)
   6) [Valid Parenthesis](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Easy_Difficulty/Valid_Parenthesis)
+  7) [Intersection of Two arrays II](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/blob/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Intersection_of_Two_Arrays_II/)
 
 - Medium Medium Difficulty
 
   1) [3sum](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/3sum)
   2) [Container with Most water](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Container_With_Most_Water)
-  3) [Intersection of Two arrays](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/blob/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Intersection_of_Two_Arrays_II/)
-  4) [Rotate array](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Rotate_Array)
-  5) [Generate Parenthesis](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Generate_Parenthesis)
-  6) [Add Two Numbers](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Add_Two_Numbers_LL)
-  7) [Number of Islands](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Number_of_Islands)
-  8) [Longest Palindromic Substring](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Longest_Palindromic_String)
-  9) [Minimum Path Sum](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Minimum_Path_Sum)
+  3) [Rotate array](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Rotate_Array)
+  4) [Generate Parenthesis](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Generate_Parenthesis)
+  5) [Add Two Numbers](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Add_Two_Numbers_LL)
+  6) [Number of Islands](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Number_of_Islands)
+  7) [Longest Palindromic Substring](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Longest_Palindromic_String)
+  8) [Minimum Path Sum](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Minimum_Path_Sum)
 
 - Hard Difficulty 
   1) [Median of Two sorted Arrays](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Hard_Difficulty/Median_of_Two_Sorted_Arrays)
