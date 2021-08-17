@@ -28,6 +28,7 @@ Problems that I have solved:
   6) [Number of Islands](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Number_of_Islands)
   7) [Longest Palindromic Substring](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Longest_Palindromic_String)
   8) [Minimum Path Sum](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Minimum_Path_Sum)
+  9) [House Robber](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/House_Robber)
 
 - Hard Difficulty 
   1) [Median of Two sorted Arrays](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Hard_Difficulty/Median_of_Two_Sorted_Arrays)
