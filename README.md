@@ -17,6 +17,7 @@ Problems that I have solved:
   5) [Two Sum](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Easy_Difficulty/Two_Sum)
   6) [Valid Parenthesis](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Easy_Difficulty/Valid_Parenthesis)
   7) [Intersection of Two arrays II](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/blob/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Intersection_of_Two_Arrays_II/)
+  8) [Climbing Stairs](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Easy_Difficulty/Climbing_Stairs)
 
 - Medium Medium Difficulty
 
