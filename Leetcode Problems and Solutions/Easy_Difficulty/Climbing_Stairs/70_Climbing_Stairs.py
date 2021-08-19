@@ -15,7 +15,7 @@ def climbStairs(n: int) -> int:
         
         # For all inputs n >= 3, we use dynammic programming
         
-        # Initialising the dp_array. dp[i] is the number of steps needed to reach the ith step
+        # Initialising the dp_array. dp[i] is the number of steps needed to reach the (i  + 1)th step
         dp_array = [0] * n
         
         # There is one way to reach the first step
