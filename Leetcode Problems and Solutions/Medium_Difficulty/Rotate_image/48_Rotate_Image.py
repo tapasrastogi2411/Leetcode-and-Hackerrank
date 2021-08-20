@@ -20,7 +20,9 @@ def rotate(matrix: List[List[int]]) -> None:
     '''      
         
     for i in range(length):
-        for j in range(i):
+
+        # Doing till range(i) only goes swapping elements till the main diagonal
+        for j in range(i): # Or can do (i, length) as well
                 
             temp = matrix[i][j]
             matrix[i][j] = matrix[j][i]
@@ -42,6 +44,34 @@ def rotate(matrix: List[List[int]]) -> None:
             matrix[i][j] = matrix[i][length - j - 1] # similar to [n - i - 1]
             matrix[i][length - j - 1] = temp
 
+# Adding a 28ms accepted solution which beats 95 percent of all online submissions
+def rotateRevampedV1(matrix: List[List[int]]) -> None:
+
+    # We can also implement a separate transpose and refelect methods and call it in rotate
+    transpose(matrix)
+    reflect(matrix)
+    
+def transpose(matrix: List[List[int]]) -> None:
+        
+    for i in range(len(matrix)):
+            
+        # Doing till range(i) only goes swapping elements till the main diagonal
+        for j in range(i): # Or can do range(i, length)
+                
+            temp = matrix[i][j]
+            matrix[i][j] = matrix[j][i]
+            matrix[j][i] = temp
+    
+def reflect(matrix: List[List[int]]) -> None:
+        
+    for i in range(len(matrix)):
+        for j in range(len(matrix) // 2):
+                
+            temp = matrix[i][j]
+            matrix[i][j] = matrix[i][len(matrix) - j - 1] # similar to [n - i - 1]
+            matrix[i][len(matrix) - j - 1] = temp
+        
+
 # Testing
 
 input_matrix = [
@@ -51,6 +81,6 @@ input_matrix = [
     [7, 8, 9]
 ]
 
-rotate(input_matrix)
+rotateRevampedV1(input_matrix)
 
 print(f"Rotate matrix is: {input_matrix}")
