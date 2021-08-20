@@ -31,6 +31,7 @@ Problems that I have solved:
   8) [Minimum Path Sum](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Minimum_Path_Sum)
   9) [House Robber](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/House_Robber)
   10) [Unique Paths](https://leetcode.com/problems/unique-paths/)
+  11) [Rotate Image](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Rotate_image)
 
 - Hard Difficulty 
   1) [Median of Two sorted Arrays](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Hard_Difficulty/Median_of_Two_Sorted_Arrays)
