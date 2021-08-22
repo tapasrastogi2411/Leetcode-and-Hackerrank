@@ -82,8 +82,38 @@ struct ListNode* reverseListIterative(struct ListNode* head){
 
 // Method 2 - Reversing a linked list recursively
 struct ListNode *reverseListRecursive(struct ListNode *head){
-    struct ListNode *result = initialiser(0);
-    return result;
+
+
+    /*Base condition to exit recursion
+    When we have reached the last node, denoted by head -> next or if the node we are at is NULL(For the edge case when
+    the linkedList is empty) */
+    
+    if(head == NULL || head -> next == NULL){ // Link part is null or the node is null itself
+        
+        /* As soon as you reach the last node, you make the head pointer point to the last node
+           you are at. The last node that you are at is head */
+        return head;
+    }
+    
+    /* Doing our recursive call - We traverse the list in the forward direction to reach the
+    last  node, and then start reversing the link startng from the last node
+    
+    The new head that you get from reversing is stored in newHead variable */
+    struct ListNode *newHead;
+    newHead = reverseListRecursive(head -> next);
+    
+    // The steps that would run after the recursion to reverse the connection at each node. Head is the node that we are at right now
+    struct ListNode * temp = head -> next;
+    
+    // Reversing the connection
+    temp -> next = head;
+    
+    // So that the all the nodes till head are reversed
+    head -> next = NULL;
+    
+    // Return the new head of the reversed linked list 
+    return newHead;
+   
 }
 
 int main(){
@@ -104,7 +134,8 @@ int main(){
     head1 = addAtHead(head1, head1Node1);
 
     struct ListNode *result = NULL;
-    result = reverseListIterative(head1);
+    printList(head1);
+    result = reverseListRecursive(head1);
 
     printList(result);
 
