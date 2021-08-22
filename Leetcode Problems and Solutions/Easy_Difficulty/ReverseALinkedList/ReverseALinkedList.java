@@ -2,10 +2,12 @@ package Easy_Difficulty.ReverseALinkedList;
 
 public class ReverseALinkedList {
 
+    // Definition of a node of our linked list
     public static class ListNode {
         int val;
         ListNode next;
-
+        
+        // Constructor to create ListNodes in our driver code to test
         ListNode(){
         }
 
@@ -19,8 +21,10 @@ public class ReverseALinkedList {
         }
     }
 
+    // A variable to instantiate a linkedList for the driver code
     public ListNode head1;
 
+    // A method to print and view our linke list to see if the method works as expected
     public void printList(ListNode head){
         ListNode temp = head;
 
@@ -31,10 +35,25 @@ public class ReverseALinkedList {
         System.out.println();
     }
 
-    public ListNode reverseList(ListNode head){
+    // The main method to implement
+    public ListNode reverseListIterative(ListNode head){
 
-        ListNode myNode = new ListNode(3, null);
-        return myNode;
+        // The comments explaining this code is in the C implementation of this problem :)
+
+        ListNode previous = null;
+        ListNode current = head;
+        ListNode next;
+
+        while(current != null){
+
+            next = current.next;
+            current.next = previous;
+            
+            previous = current;
+            current = next;
+        }
+
+        return previous;
     }
 
     public static void main(String[] args) {
@@ -46,8 +65,8 @@ public class ReverseALinkedList {
         linkedList.head1.next.next = new ListNode(3);
         linkedList.head1.next.next.next = new ListNode(4);
         linkedList.head1.next.next.next.next = new ListNode(5);
-
-        ListNode result = linkedList.reverseList(linkedList.head1);
+        
+        ListNode result = linkedList.reverseListIterative(linkedList.head1);
 
         linkedList.printList(result);
 
