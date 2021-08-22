@@ -48,6 +48,8 @@ void printList(struct ListNode *head){
 Method 1 - Reversing a linked list iteratively */
 struct ListNode* reverseListIterative(struct ListNode* head){
 
+    // An image to visualise the position of the three pointers at a given time: https://user-images.githubusercontent.com/56613320/130348015-ebced701-6677-4255-b52f-f198c06519f7.png
+
     /* We need three pointers -> previous to keep track of the previous node and pointer, so that we can make the current node  
                                  point to the previous node in an attempt to reverse the linked list
                               -> current to keep track of the node we are at in the traversal
