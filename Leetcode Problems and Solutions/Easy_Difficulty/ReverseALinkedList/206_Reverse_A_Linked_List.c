@@ -44,9 +44,42 @@ void printList(struct ListNode *head){
     printf("\n");
 }
 
-// The main function to implement
-struct ListNode* reverseList(struct ListNode* head){
+/* The main function to implement
+Method 1 - Reversing a linked list iteratively */
+struct ListNode* reverseListIterative(struct ListNode* head){
 
+    /* We need three pointers -> previous to keep track of the previous node and pointer, so that we can make the current node  
+                                 point to the previous node in an attempt to reverse the linked list
+                              -> current to keep track of the node we are at in the traversal
+                              -> next to keep  track of the next node and its pointer so that we can move forward in the     
+                                 traversal once we have reversed the connection
+    
+    */
+    struct ListNode *previous = NULL; // Previous pointer starts from a NULL value
+    struct ListNode *current = head; // Current pointer starts from the head, since that is the node we start from
+    struct ListNode *next; // This will be updated in the traversal loop
+
+    while(current != NULL){ // This means that we have already reached the end and reversed all the nodes
+
+        // We make next point to current's next so that still have a connection to the next node before we break it to reverse the connection. Basically storing current -> next before we set it to previous
+        next = current -> next;
+        
+        // We reverse the connection. We make the node that we are at, to point to the previous node
+        current -> next = previous;
+
+        // We update the pointers to move forward
+        previous = current;
+        current = next; // Recall that next stores information about next node after current
+
+    }
+
+    /* After the loop has finished, current is at NULL and previous points to the last node in the linked list. Therefore we can just return previous as the new head of our reversed linked list */
+
+    return previous;
+}
+
+// Method 2 - Reversing a linked list recursively
+struct ListNode *reverseListRecursive(struct ListNode *head){
     struct ListNode *result = initialiser(0);
     return result;
 }
@@ -69,7 +102,7 @@ int main(){
     head1 = addAtHead(head1, head1Node1);
 
     struct ListNode *result = NULL;
-    result = reverseList(head1);
+    result = reverseListIterative(head1);
 
     printList(result);
 
