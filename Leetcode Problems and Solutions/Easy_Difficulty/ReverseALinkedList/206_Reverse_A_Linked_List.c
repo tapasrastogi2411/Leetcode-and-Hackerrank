@@ -83,6 +83,8 @@ struct ListNode* reverseListIterative(struct ListNode* head){
 // Method 2 - Reversing a linked list recursively
 struct ListNode *reverseListRecursive(struct ListNode *head){
 
+    // An image to visualise the pointers: https://user-images.githubusercontent.com/56613320/130349053-0a4fcf0b-313b-4471-9907-6cb9f8b1b1e3.png
+
 
     /*Base condition to exit recursion
     When we have reached the last node, denoted by head -> next or if the node we are at is NULL(For the edge case when
