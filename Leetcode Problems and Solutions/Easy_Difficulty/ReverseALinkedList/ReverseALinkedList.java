@@ -56,6 +56,23 @@ public class ReverseALinkedList {
         return previous;
     }
 
+    public ListNode reverseListRecursive(ListNode head){
+
+        if(head == null || head.next == null){
+            return head;
+        }
+        
+        ListNode newHead = reverseListRecursive(head.next);
+        
+        ListNode temp = head.next;
+        temp.next = head;
+        head.next = null;
+        
+        return newHead;
+
+
+    }
+
     public static void main(String[] args) {
         
         ReverseALinkedList linkedList = new ReverseALinkedList();
@@ -66,7 +83,7 @@ public class ReverseALinkedList {
         linkedList.head1.next.next.next = new ListNode(4);
         linkedList.head1.next.next.next.next = new ListNode(5);
         
-        ListNode result = linkedList.reverseListIterative(linkedList.head1);
+        ListNode result = linkedList.reverseListRecursive(linkedList.head1);
 
         linkedList.printList(result);
 
