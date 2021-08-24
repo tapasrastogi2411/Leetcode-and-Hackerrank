@@ -19,6 +19,7 @@ Problems that I have solved:
   7) [Intersection of Two arrays II](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/blob/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Intersection_of_Two_Arrays_II/)
   8) [Climbing Stairs](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Easy_Difficulty/Climbing_Stairs)
   9) [Reverse a Linked List](https://leetcode.com/problems/reverse-linked-list/)
+  10) [Invert a Binary Tree](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Easy_Difficulty/Invert_Binary_Tree)
 
 - Medium Medium Difficulty
 
