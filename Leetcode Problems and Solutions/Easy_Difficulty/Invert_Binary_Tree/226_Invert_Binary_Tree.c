@@ -110,6 +110,29 @@ struct TreeNode* invertTreeMethod1(struct TreeNode* root){
     return root; 
 }
 
+struct TreeNode *invertTreeMethod2(struct TreeNode *root){
+
+    // For this we can do the `post-order traversal` of the tree in the same method instead of creating another method
+
+    if(root == NULL){
+        return root;
+    }
+    
+    // Traversing the left and right subtrees
+    invertTreeMethod2(root -> left);
+    invertTreeMethod2(root -> right);
+    
+    // Swap the left and the right subtrees(basically inverting :))
+    struct TreeNode *temp = NULL;
+    temp = root -> left;
+    root -> left = root -> right;
+    root -> right = temp;
+
+    // The root remains unchanged when you invert a binary tree
+    return root;
+    
+}
+
 
 
 
@@ -137,7 +160,8 @@ int main(){
 
     postOrderTraveral(root);
     printf("\n");
-    root = invertTreeMethod1(root);
+    // root = invertTreeMethod1(root);
+    root = invertTreeMethod2(root);
 
     postOrderTraveral(root);
     printf("\n");
