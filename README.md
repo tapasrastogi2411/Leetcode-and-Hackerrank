@@ -6,6 +6,8 @@ All solutions will be either in Python, Java or C or a combination of the three
 
 Most of the problems have a python solution, with some of the data strcuture related questions like Linked Lists and Binary Search Trees, implemented in C/Java
 
+Leetcode Profile: https://leetcode.com/tapas_rastogi/
+
 Problems that I have solved: 
 
 - Easy Difficulty
