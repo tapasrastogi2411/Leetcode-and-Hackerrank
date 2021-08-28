@@ -9,8 +9,45 @@ A mapping of digit to letters (just like on the telephone buttons) is given belo
 
 from typing import List, Tuple, Dict
 
+def generateCombinations(currentString: str, digitToChar: Dict[str, str], digits: str, index: int, result: List[str]) -> None:
+    
+    if len(currentString) == len(digits):
+        result.append(currentString)
+
+    else:
+
+        currentDigit = digits[index]
+        mappingForDigit = digitToChar[currentDigit]
+
+        for char in mappingForDigit:
+            generateCombinations(currentString + char, digitToChar, digits, index + 1, result)
+
+
 def letterCombinations(digits: str) -> List[str]:
-    pass
+    
+    digitToChar = {
+
+        "2": "abc",
+        "3": "def",
+        "4": "ghi",
+        "5": "jkl",
+        "6": "mno",
+        "7": "pqrs",
+        "8": "tuv",
+        "9": "wxyz"
+        
+    }
+
+    result = []
+
+    if len(digits) != 0:
+
+        generateCombinations("", digitToChar, digits, 0, result)
+
+
+    return result
+  
+    
 
 # Testing 
 
