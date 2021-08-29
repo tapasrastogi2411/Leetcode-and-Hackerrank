@@ -7,6 +7,32 @@
 from typing import List, Tuple, Dict
 import timeit
 
+
+# A single pass O(N) solution worked using the `sliding window` algorithmic approach
+def lengthOfLongestSubstring(s: str) -> int:
+
+    myset = set()
+
+    left_pointer = 0
+    right_pointer = 0
+
+    max_len = 0
+
+    while(right_pointer < len(s)):
+
+        if s[right_pointer] not in myset:
+
+
+            myset.add(s[right_pointer])
+            right_pointer += 1
+            max_len = max(max_len, len(myset))
+        
+        else:
+            myset.discard(s[right_pointer])
+            left_pointer += 1
+
+    return max_len
+
 def checkDuplicates(s: str) -> bool:
         
     input_dict = {}
@@ -21,8 +47,9 @@ def checkDuplicates(s: str) -> bool:
             return True
         
     return False
-    
-def lengthOfLongestSubstring(s: str) -> int:
+
+# Brute force solution which doesnt get accepted by Leetcode Judge due to time limit exceeded 
+def lengthOfLongestSubstringBruteForce(s: str) -> int:
         
     if len(s) == 0:
         return 0
