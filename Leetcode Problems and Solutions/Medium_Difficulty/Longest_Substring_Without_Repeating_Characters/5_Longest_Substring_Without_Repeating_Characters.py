@@ -28,7 +28,7 @@ def lengthOfLongestSubstring(s: str) -> int:
             max_len = max(max_len, len(myset))
         
         else:
-            myset.discard(s[right_pointer])
+            myset.discard(s[left_pointer])
             left_pointer += 1
 
     return max_len
