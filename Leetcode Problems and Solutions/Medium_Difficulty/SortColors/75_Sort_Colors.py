@@ -15,14 +15,18 @@ A mapping of digit to letters (just like on the telephone buttons) is given belo
 
 from typing import List, Tuple, Dict
 
+# Unbearably naive O(N) solution to this problem
 def sortColors(nums: List[int]) -> None:
 
+    # The different lists that we need for this question
     redList = []
     whiteList = []
     blueList = []
+
+    # The list from which nums will copy the final answer
     newList = []
         
-        
+    # Building the individual 0s, 1s and 2s list
     for number in nums:
         if number == 0:
             redList.append(number)
@@ -33,7 +37,8 @@ def sortColors(nums: List[int]) -> None:
             
         else:
             blueList.append(number)
-        
+
+    # Adding 0s, 1s, and 2s in the correct order to newList   
     for number in redList:
         newList.append(number)
         
@@ -42,7 +47,8 @@ def sortColors(nums: List[int]) -> None:
         
     for number in blueList:
         newList.append(number)
-        
+    
+    # Copying the values from newList onto the input nums, since this is a in place question
     for index in range(len(newList)):
             
         nums[index] = newList[index]
