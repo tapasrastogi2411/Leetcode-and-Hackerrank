@@ -8,7 +8,7 @@ from typing import List, Tuple, Dict
 import timeit
 
 
-# A single pass O(N) solution worked using the `sliding window` algorithmic approach
+# A single pass O(N) solution worked using the `sliding window` algorithmic approach - using sets
 def lengthOfLongestSubstringUsingSets(s: str) -> int:
 
     myset = set()
@@ -33,25 +33,27 @@ def lengthOfLongestSubstringUsingSets(s: str) -> int:
 
     return max_len
 
+# A solution to the problem using dictionaries/hashmap
 def lengthOfLongestSubstringUsingDictonary(s: str) -> int:
 
     myDict = {}
     max_len = 0
 
     left_pointer = 0
-    
+    right_pointer = 0
 
-    for right_pointer in range(len(s)):
+    while right_pointer < len(s):
 
-        if s[right_pointer] not in myDict:
+        if s[right_pointer] in myDict:
 
-            myDict[s[right_pointer]] = right_pointer
-            max_len = max(max_len, right_pointer - left_pointer + 1)
-        
-        else: 
             left_pointer = max(left_pointer, myDict[s[right_pointer]] + 1)
-            
+        
+        myDict[s[right_pointer]] = right_pointer
+        max_len = max(max_len, right_pointer - left_pointer + 1)
+        right_pointer += 1
+    
     return max_len
+    
 
 def checkDuplicates(s: str) -> bool:
         
@@ -90,15 +92,8 @@ def lengthOfLongestSubstringBruteForce(s: str) -> int:
     
 # Testing
 
-input_string = "abcbabcbb"
+input_string = "tapasrastogi"
 
 start_time = timeit.default_timer()
 
 print(lengthOfLongestSubstringUsingDictonary(input_string))
-stop_time = timeit.default_timer()
-
-diff = stop_time - start_time
-
-print(f"The time taken is: {diff}")
-
-# print(len(input_string))
