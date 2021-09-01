@@ -58,11 +58,13 @@ def lengthOfLongestSubstringUsingDictonary(s: str) -> int:
         approach
 
         For the edge case of strings like "abba", we include the max() statement since at times, we only want to move 
-        the position of the left_pointer if its the right thing to do, otherwise we leave it there
+        the position of the left_pointer if its between the left and the right pointer, that is if its after the starting point, that is after the left_pointer
         '''
-        if s[right_pointer] in myDict:
-
-            left_pointer = max(left_pointer, myDict[s[right_pointer]] + 1)
+        if s[right_pointer] in myDict and myDict[s[right_pointer]] >= left_pointer:
+            
+            # Instead of left_pointer = max(left_pointer, myDict[s[right_pointer]] + 1), we can add an extra `and` condition to the if clause and exclude the 'and'
+            left_pointer = myDict[s[right_pointer]] + 1
+            
         
         # Building up the dictionary and finding the maximum length substring. No `else` clause since the keys in the dictionary remain the same and are not modified as in the `set approach`
         myDict[s[right_pointer]] = right_pointer
@@ -109,7 +111,7 @@ def lengthOfLongestSubstringBruteForce(s: str) -> int:
     
 # Testing
 
-input_string = "tapasrastogi"
+input_string = "Hello World!"
 
 start_time = timeit.default_timer()
 
