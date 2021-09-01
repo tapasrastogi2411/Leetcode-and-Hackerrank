@@ -41,18 +41,30 @@ def lengthOfLongestSubstringUsingSets(s: str) -> int:
 # A solution to the problem using dictionaries/hashmap
 def lengthOfLongestSubstringUsingDictonary(s: str) -> int:
 
+    # This dictionary stores the characters it encounters as key and the latest place they were found in the string(their indices) as the corresponding values
     myDict = {}
+
     max_len = 0
 
     left_pointer = 0
     right_pointer = 0
 
     while right_pointer < len(s):
+        '''
+        If the character we are is already in the dictionary then we make the left pointer point to immediate
+        next of the previous occurance of that character which is accesses through dict[s[right_pointer]].
+         
+        This is similar to moving the left_pointer by 1 and removing the element at the left_pointer in the `set`
+        approach
 
+        For the edge case of strings like "abba", we include the max() statement since at times, we only want to move 
+        the position of the left_pointer if its the right thing to do, otherwise we leave it there
+        '''
         if s[right_pointer] in myDict:
 
             left_pointer = max(left_pointer, myDict[s[right_pointer]] + 1)
         
+        # Building up the dictionary and finding the maximum length substring. No `else` clause since the keys in the dictionary remain the same and are not modified as in the `set approach`
         myDict[s[right_pointer]] = right_pointer
         max_len = max(max_len, right_pointer - left_pointer + 1)
         right_pointer += 1
