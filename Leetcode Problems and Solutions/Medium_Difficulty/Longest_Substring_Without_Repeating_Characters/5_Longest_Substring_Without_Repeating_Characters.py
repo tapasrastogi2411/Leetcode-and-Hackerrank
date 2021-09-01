@@ -11,22 +11,27 @@ import timeit
 # A single pass O(N) solution worked using the `sliding window` algorithmic approach - using sets
 def lengthOfLongestSubstringUsingSets(s: str) -> int:
 
+    # Initialise a set to store the characters we encounter in the string
     myset = set()
 
+    # The two pointers we need to create a `sliding window`
     left_pointer = 0
     right_pointer = 0
 
+    # A variable to store the maximum length substring that we encounter
     max_len = 0
 
+    # Our right_pointer is the variable that will go till the end of the input string
     while(right_pointer < len(s)):
 
+        # If the character we are at in the string is not in the set, add it to the set, increment the right_pointer to move forward and get the maximum length of the substring encountered so far
         if s[right_pointer] not in myset:
-
 
             myset.add(s[right_pointer])
             right_pointer += 1
             max_len = max(max_len, len(myset))
         
+        # If the character we are at is already in the set, then we start removing the elements from the set from the left, using the left pointer, shrinking the `window` and moving the left_pointer to the next element
         else:
             myset.discard(s[left_pointer])
             left_pointer += 1
