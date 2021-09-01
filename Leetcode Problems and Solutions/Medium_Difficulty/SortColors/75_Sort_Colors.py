@@ -17,10 +17,43 @@ from typing import List, Tuple, Dict
 
 def sortColors(nums: List[int]) -> None:
 
-    pass
+    redList = []
+    whiteList = []
+    blueList = []
+    newList = []
+        
+        
+    for number in nums:
+        if number == 0:
+            redList.append(number)
+            
+        elif number == 1:
+                
+            whiteList.append(number)
+            
+        else:
+            blueList.append(number)
+        
+    for number in redList:
+        newList.append(number)
+        
+    for number in whiteList:
+        newList.append(number)
+        
+    for number in blueList:
+        newList.append(number)
+        
+    for index in range(len(newList)):
+            
+        nums[index] = newList[index]
+        
+
+    
 
 # Testing
 
 input_nums = [2, 0, 2, 1, 1, 0]
 
-print(sortColors(input_nums))
+print(input_nums)
+sortColors(input_nums)
+print(input_nums)
