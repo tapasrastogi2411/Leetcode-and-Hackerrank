@@ -39,6 +39,7 @@ Problems that I have solved:
   11) [Rotate Image](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Rotate_image)
   12) [Letter Combinations of a Phone](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Letter_Combinations_Of_A_Phone_Number)
   13) [Longest Substring Without Repeating Characters](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/Longest_Substring_Without_Repeating_Characters)
+  14) [Sort Colors](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Medium_Difficulty/SortColors)
 
 - Hard Difficulty 
   1) [Median of Two sorted Arrays](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Hard_Difficulty/Median_of_Two_Sorted_Arrays)
