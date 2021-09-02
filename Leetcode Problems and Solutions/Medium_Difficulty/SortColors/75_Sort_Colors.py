@@ -16,7 +16,7 @@ A mapping of digit to letters (just like on the telephone buttons) is given belo
 from typing import List, Tuple, Dict
 
 # Unbearably naive O(N) solution to this problem
-def sortColors(nums: List[int]) -> None:
+def sortColorsNaive(nums: List[int]) -> None:
 
     # The different lists that we need for this question
     redList = []
@@ -54,6 +54,44 @@ def sortColors(nums: List[int]) -> None:
         nums[index] = newList[index]
         
 
+# A better and simple O(N) solution to this problem.
+
+def sortColors(nums: List[int]) -> None:
+
+    # Three variables, left, middle and right pointers for 0s, 1s and 2s respectively. Left and middle start at 0 and right pointer at the end
+    left_pointer = 0
+    middle_pointer = 0
+    right_pointer = len(nums) - 1
+
+    # The middle pointer is the one which is looped throughout the list
+
+    while middle_pointer <= right_pointer:
+
+        # If the element that you are at is a 0, then it should be at the beginning of the list, towards the left
+        if nums[middle_pointer] == 0:
+
+            # Since it is a 0, we swap this element with the element currently at the left position, using python notation
+            nums[left_pointer], nums[middle_pointer] = nums[middle_pointer], nums[left_pointer]
+
+            # We move both the left and the middle pointers forward
+            left_pointer += 1
+            middle_pointer += 1
+        
+        # If the element is a 1, then it should be in the middle, and we dont do anything
+        elif nums[middle_pointer] == 1:
+
+            # It is exactly where we want it to be, we just move on
+            middle_pointer += 1
+        
+        # If the element is a 2, then it should be at the very end, towards the right
+        else:
+
+            # We swap it with the element at the right pointer
+            nums[middle_pointer], nums[right_pointer] = nums[right_pointer], nums[middle_pointer]
+
+            # We decrement the right pointer by 1
+            right_pointer -= 1
+    
     
 
 # Testing
