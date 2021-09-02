@@ -54,7 +54,7 @@ def sortColorsNaive(nums: List[int]) -> None:
         nums[index] = newList[index]
         
 
-# A better and simple O(N) solution to this problem.
+# A better and simple O(N) solution to this problem.Also called the `Dutch Partitioning problem`
 
 def sortColors(nums: List[int]) -> None:
 
@@ -91,12 +91,22 @@ def sortColors(nums: List[int]) -> None:
 
             # We decrement the right pointer by 1
             right_pointer -= 1
+
+            '''The reason we dont increment the middle pointer for this else clause, is because doing the swap above can introduce a 0 in the middle of the array, and moving the middle pointer by 1, leaves the possiblity of that being sranded somewhere in the middle with 1s and not at the beginning
+
+            An example input demonstrating this: [0, 1, 2, 1, 0, 2]. This brings the value 0 in the middle of the array reaching the else clause, and if the middle pointer is incremented then we have the wrong input since the 0 is stuck in the middle of the array and not at the beginning
+
+            '''
+
+
+
+        
     
     
 
 # Testing
 
-input_nums = [2, 0, 2, 1, 1, 0]
+input_nums = [0, 1, 2, 1, 0, 2]
 
 print(input_nums)
 sortColors(input_nums)
