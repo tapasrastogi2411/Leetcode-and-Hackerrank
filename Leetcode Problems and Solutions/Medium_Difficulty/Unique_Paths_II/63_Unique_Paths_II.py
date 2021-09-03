@@ -51,10 +51,15 @@ def uniquePathsWithObstacles(obstacleGrid: List[List[int]]) -> int:
         
     for i in range(1, numRows):
         for j in range(1, numColumns):
+
+            if obstacleGrid[i][j] == 0:
             
-            dp_array[i][j] = dp_array[i - 1][j] + dp_array[i][j - 1]
+                dp_array[i][j] = dp_array[i - 1][j] + dp_array[i][j - 1]
+            
+            else:
+                dp_array[i][j] = 0
         
-    return dp_array[-1][-1]
+    return dp_array[numRows - 1][numColumns - 1]
 
 # Testing
 
