@@ -12,6 +12,7 @@ An obstacle and space is marked as 1 and 0 respectively in the grid.
 '''
 from typing import List
 
+# A O(M * N) space complexity solution by instantiating a separate dp_array
 def uniquePathsWithObstacles(obstacleGrid: List[List[int]]) -> int:
 
     # Getting the number of rows and columns in our grid
@@ -66,9 +67,50 @@ def uniquePathsWithObstacles(obstacleGrid: List[List[int]]) -> int:
             # We have an obstacle and then number of ways we can reach a cell with an obstacle is 0
             else:
                 dp_array[i][j] = 0
-                
+
     # The number of ways to reach the finish is the value held in the final cell of the dp_array
     return dp_array[numRows - 1][numColumns - 1]
+
+# An in-place solution, using the same input obstacleGrid as the dp_array
+
+def uniquePathsIIInPlace(obstacleGrid: List[List[int]]) -> int:
+
+    # Getting the number of rows and columns in our grid
+    numRows = len(obstacleGrid)
+    numColumns = len(obstacleGrid[0])
+        
+    # Using the same input grid as our dp_array for an in-place solution
+        
+    if obstacleGrid[0][0] == 1:
+        return 0
+        
+    obstacleGrid[0][0] = 1
+        
+    for i in range(1, numColumns):
+            
+        if obstacleGrid[0][i] == 1:
+            obstacleGrid[0][i] = 0
+            
+        else:
+            obstacleGrid[0][i] = obstacleGrid[0][i - 1]
+        
+    for i in range(1, numRows):
+            
+        if obstacleGrid[i][0] == 1:
+            obstacleGrid[i][0] = 0
+            
+        else:
+            obstacleGrid[i][0] = obstacleGrid[i - 1][0]
+        
+    for i in range(1, numRows):
+        for j in range(1, numColumns):
+                
+            if obstacleGrid[i][j] == 1:
+                obstacleGrid[i][j] = 0 
+            else:
+                obstacleGrid[i][j] = obstacleGrid[i - 1][j] + obstacleGrid[i][j - 1]
+        
+    return obstacleGrid[numRows - 1][numColumns - 1]
 
 # Testing
 
