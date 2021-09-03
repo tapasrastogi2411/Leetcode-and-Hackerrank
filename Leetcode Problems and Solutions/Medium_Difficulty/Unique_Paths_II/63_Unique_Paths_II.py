@@ -14,7 +14,47 @@ from typing import List
 
 def uniquePathsWithObstacles(obstacleGrid: List[List[int]]) -> int:
 
-    pass
+    # Getting the number of rows and columns in our grid
+    numRows = len(obstacleGrid)
+    numColumns = len(obstacleGrid[0])
+        
+    # Initialising the dp_array as done in unique paths I problem
+    dp_array = []
+        
+    for _ in range(numRows):
+        dp_array.append([0] * numColumns)
+        
+    # Simplest case handled first
+    if obstacleGrid[0][0] == 1:
+            return 0
+        
+    dp_array[0][0] = 1
+        
+    # Calculating the number of ways to reach cell in the first row
+    for i in range(1, numColumns):
+            
+        if obstacleGrid[0][i] == 1:
+            dp_array[0][i] = 0
+            
+        else:
+            dp_array[0][i] = obstacleGrid[0][i - 1]
+            
+    # Calculating the number of ways to reach cells in the first column
+    for i in range(1, numRows):
+        if obstacleGrid[i][0] == 1:
+                
+            dp_array[i][0] = 0
+           
+        else:
+            dp_array[i][0] = obstacleGrid[i - 1][0]
+        
+        
+    for i in range(1, numRows):
+        for j in range(1, numColumns):
+            
+            dp_array[i][j] = obstacleGrid[i - 1][j] + obstacleGrid[i][j - 1]
+        
+    return dp_array[-1][-1]
 
 # Testing
 
