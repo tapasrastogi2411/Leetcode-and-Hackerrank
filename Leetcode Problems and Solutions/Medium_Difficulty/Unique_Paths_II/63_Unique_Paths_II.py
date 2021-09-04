@@ -37,7 +37,7 @@ def uniquePathsWithObstacles(obstacleGrid: List[List[int]]) -> int:
             dp_array[0][i] = 0
             
         else:
-            dp_array[0][i] = obstacleGrid[0][i - 1]
+            dp_array[0][i] = dp_array[0][i - 1]
             
     # Calculating the number of ways to reach cells in the first column
     for i in range(1, numRows):
@@ -46,13 +46,13 @@ def uniquePathsWithObstacles(obstacleGrid: List[List[int]]) -> int:
             dp_array[i][0] = 0
            
         else:
-            dp_array[i][0] = obstacleGrid[i - 1][0]
+            dp_array[i][0] = dp_array[i - 1][0]
         
         
     for i in range(1, numRows):
         for j in range(1, numColumns):
             
-            dp_array[i][j] = obstacleGrid[i - 1][j] + obstacleGrid[i][j - 1]
+            dp_array[i][j] = dp_array[i - 1][j] + dp_array[i][j - 1]
         
     return dp_array[-1][-1]
 
