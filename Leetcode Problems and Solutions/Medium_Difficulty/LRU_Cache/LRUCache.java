@@ -18,6 +18,8 @@ Thought Process for implementing an LRU Cache
 - Use a hashmap and a doubly linked list for this question for the following reason - Hashmap will store the key and the address of the key in the doubly linked list as a value. Doubly Linked List is for maintaining that we always know the position of the least recently used key-value pair */
 package Medium_Difficulty.LRU_Cache;
 
+import java.util.HashMap;
+
 public class LRUCache {
 
     // Definition of a doubly linked list node - where each node has two pointers, next and previous and the data field is key and value pairs 
@@ -44,10 +46,16 @@ public class LRUCache {
     // Defining the static variables that will is a part of any LRUCache Object
 
     int LRUcapacity;
-    doublyLinkedListNode head = doublyLinkedListNode(0, 0);
+
+    // The head and tail of the doubly LinkedList
+    doublyLinkedListNode head = new doublyLinkedListNode(0, 0);
+    doublyLinkedListNode tail = new doublyLinkedListNode(0, 0);
+
+    // A hashmap to store the key-address pairs of keys that are put in the cache
+    HashMap<Integer, doublyLinkedListNode> mapping = new HashMap<>();
 
 
-    // Initialize the LRU cache with positive size capacity.
+    // Initialize the LRU cache with positive size capacity along with the head and tail of the doubly LinkedList.
     public LRUCache(int capacity) {
 
         this.LRUcapacity = capacity;
