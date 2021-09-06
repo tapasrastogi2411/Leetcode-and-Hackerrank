@@ -13,10 +13,13 @@ void put(int key, int value)
 The functions get and put must each run in O(1) average time complexity.
 */
 
+/*
+Thought Process for implementing an LRU Cache
+- Use a hashmap and a doubly linked list for this question for the following reason - Hashmap will store the key and the address of the key in the doubly linked list as a value. Doubly Linked List is for maintaining that we always know the position of the least recently used key-value pair */
 package Medium_Difficulty.LRU_Cache;
 
 public class LRUCache {
-
+    
     int LRUcapacity;
 
     // Initialize the LRU cache with positive size capacity.
