@@ -20,8 +20,6 @@ package Medium_Difficulty.LRU_Cache;
 
 import java.util.HashMap;
 
-import jdk.internal.jimage.ImageReader.Node;
-
 public class LRUCache {
 
     // Definition of a doubly linked list node - where each node has two pointers, next and previous and the data field is key and value pairs 
@@ -60,7 +58,7 @@ public class LRUCache {
     // Initialize the LRU cache with positive size capacity along with the head and tail of the doubly LinkedList.
     public LRUCache(int capacity) {
 
-        this.LRUcapacity = capacity;
+        LRUcapacity = capacity;
 
         // Connecting the head and tail of the DLL together as an LRU is initialised for the first time
         head.next = tail;
@@ -107,6 +105,7 @@ public class LRUCache {
             
             doublyLinkedListNode newNodeWithUpdtatedValues = new doublyLinkedListNode(key, value);
             insertAthead(newNodeWithUpdtatedValues);
+            return;
         }
 
         // Case 2: If you are trying to put a key-value in the LRU but the capacity is already full, then remove the LRU node and insert the new key-value pair
@@ -120,7 +119,14 @@ public class LRUCache {
 
             doublyLinkedListNode newNodeToAdd = new doublyLinkedListNode(key, value);
             insertAthead(newNodeToAdd);
+            return;
         }
+
+        // Case 3: When it is a new key-node pair that is to be added 
+
+        doublyLinkedListNode newNodeToadd = new doublyLinkedListNode(key, value);
+        insertAthead(newNodeToadd);
+        return;
         
     }
 
@@ -166,7 +172,6 @@ public class LRUCache {
         
         // Instantiating and calling the LRUCache object
         LRUCache obj = new LRUCache(10);
-        // int param_1 = obj.get(3);
         obj.put(4, 6);
     }
     
