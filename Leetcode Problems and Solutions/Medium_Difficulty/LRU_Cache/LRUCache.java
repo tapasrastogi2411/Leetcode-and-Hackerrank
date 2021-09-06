@@ -77,6 +77,24 @@ public class LRUCache {
         
     }
 
+    // A method to add a node at the head of a doubly linked list - to be used in get() and put() method
+    public void insertAthead(doublyLinkedListNode nodeToInsert){
+
+    }
+
+    // A method to delete a node from a doubly Linked List:
+    public void deleteNode(doublyLinkedListNode nodeToDelete){
+        
+        // Setting the next pointer of the node to the left of nodeTdelete to point to the node after nodeToDelete
+        nodeToDelete.previous.next = nodeToDelete.next;
+
+        // Setting the previous pointer of the node to the right of nodeToDelete to the node before nodeToDelete
+        nodeToDelete.next.previous = nodeToDelete.previous;
+
+        // Remove the key-node pair from the hashmap
+        mapping.remove(nodeToDelete.key);
+    }
+
     public static void main(String[] args) {
         
         // Instantiating and calling the LRUCache object
