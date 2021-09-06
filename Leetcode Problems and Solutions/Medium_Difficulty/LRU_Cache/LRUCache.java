@@ -30,9 +30,22 @@ public class LRUCache {
         // The data fields for the node - a key value pair
         int key;
         int value;
+
+        // A constructor which makes new DLL nodes using the key and value integers
+
+        public doublyLinkedListNode(int givenKey, int givenValue){
+
+            this.key = givenKey;
+            this.value = givenValue;   
     }
+
+}
     
+    // Defining the static variables that will is a part of any LRUCache Object
+
     int LRUcapacity;
+    doublyLinkedListNode head = doublyLinkedListNode(0, 0);
+
 
     // Initialize the LRU cache with positive size capacity.
     public LRUCache(int capacity) {
