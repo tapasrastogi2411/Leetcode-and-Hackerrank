@@ -80,6 +80,21 @@ public class LRUCache {
     // A method to add a node at the head of a doubly linked list - to be used in get() and put() method
     public void insertAthead(doublyLinkedListNode nodeToInsert){
 
+        // Setting up the next pointer link of the nodeToInsert
+
+        // Making the next pointer of the nodeToInsert point to what is pointed to at by head, since this node comes up immediately after head
+        nodeToInsert.next = head.next;
+
+        // Making the previous pointer of the node to the right of nodeToInsert, to point to nodeToinsert
+        nodeToInsert.next.previous = nodeToInsert;
+
+        // Setting up the previous pointer link of the nodeToInsert
+
+        // Setting up the previous pointer link to nodeToInsert to point to head
+        nodeToInsert.previous = head;
+
+        // Making the next pointer of head point to nodeToInsert
+        head.next = nodeToInsert;
     }
 
     // A method to delete a node from a doubly Linked List:
@@ -91,7 +106,7 @@ public class LRUCache {
         // Setting the previous pointer of the node to the right of nodeToDelete to the node before nodeToDelete
         nodeToDelete.next.previous = nodeToDelete.previous;
 
-        // Remove the key-node pair from the hashmap
+        // Remove the key-node pair from the hashmap since it no longer is needed
         mapping.remove(nodeToDelete.key);
     }
 
