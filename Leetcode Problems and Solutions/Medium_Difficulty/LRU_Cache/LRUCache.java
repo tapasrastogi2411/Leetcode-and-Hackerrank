@@ -78,6 +78,7 @@ public class LRUCache {
     }
 
     // A method to add a node at the head of a doubly linked list - to be used in get() and put() method
+    // An image depicting the process of inserting a DLL node at the head: https://user-images.githubusercontent.com/56613320/132157592-b571ad16-bbd0-40ce-9699-e89a8268edab.png
     public void insertAthead(doublyLinkedListNode nodeToInsert){
 
         // Setting up the next pointer link of the nodeToInsert
