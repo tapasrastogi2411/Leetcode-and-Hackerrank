@@ -68,7 +68,28 @@ public class LRUCache {
     // Return the value of the key if the key exists, otherwise return -1.
     public int get(int key) {
 
-        return 0;
+        // The main reason we decided to keep a hashmap is to help us in the get and put methods
+
+        // If the hashmap has the key for which we are trying to get the value for, make it the LRU node, change its position in the doubly linked list by removing it from its position, inserting it at the head, and returning the value
+
+        if(mapping.containsKey(key)){
+
+            // Get the node pointed by this key first
+            doublyLinkedListNode nodePointedbyKey = mapping.get(key);
+
+            // Make the node pointed by this key at the beginning as mentioned above
+            deleteNode(nodePointedbyKey);
+            insertAthead(nodePointedbyKey);
+
+            // Return the value for this key
+            return nodePointedbyKey.value;
+
+        }
+
+        // Else there is no such key in the LRU cache, and we can return -1
+        else{
+            return -1;
+        }
         
     }
     
