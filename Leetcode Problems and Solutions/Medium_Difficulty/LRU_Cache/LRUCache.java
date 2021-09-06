@@ -97,7 +97,7 @@ public class LRUCache {
         head.next = nodeToInsert;
     }
 
-    // A method to delete a node from a doubly Linked List:
+    // A method to delete a node from a doubly Linked List: Link to visual image: https://user-images.githubusercontent.com/56613320/132157486-a82a841e-2aa5-4a66-a3fe-c2a541a71c76.png
     public void deleteNode(doublyLinkedListNode nodeToDelete){
         
         // Setting the next pointer of the node to the left of nodeTdelete to point to the node after nodeToDelete
