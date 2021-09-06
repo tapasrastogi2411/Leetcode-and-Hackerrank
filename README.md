@@ -9,7 +9,6 @@ Most of the problems have a python solution, with some of the data strcuture rel
 Leetcode Profile: https://leetcode.com/tapas_rastogi/
 
 Problems that I am currently working on
-- LRU Cache - Medium Difficulty
 - Search in Rotated Sorted Array - Medium Difficulty
 - Coin Change - Medium Difficulty
 
