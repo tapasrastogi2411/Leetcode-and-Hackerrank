@@ -117,6 +117,9 @@ public class LRUCache {
 
         // Making the next pointer of head point to nodeToInsert
         head.next = nodeToInsert;
+
+        // Dont forget to add this key-node pair to the hashmap, as our insert function also inserts the node to the doubly linked list and also puts key-node pairs into the hashmap
+        mapping.put(nodeToInsert.key, nodeToInsert);
     }
 
     // A method to delete a node from a doubly Linked List: Link to visual image: https://user-images.githubusercontent.com/56613320/132157486-a82a841e-2aa5-4a66-a3fe-c2a541a71c76.png
