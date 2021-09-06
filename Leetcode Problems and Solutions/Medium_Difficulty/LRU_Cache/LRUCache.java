@@ -19,6 +19,18 @@ Thought Process for implementing an LRU Cache
 package Medium_Difficulty.LRU_Cache;
 
 public class LRUCache {
+
+    // Definition of a doubly linked list node - where each node has two pointers, next and previous and the data field is key and value pairs 
+    public static class doublyLinkedListNode{
+
+        // The next and previous pointers for a node
+        doublyLinkedListNode next;
+        doublyLinkedListNode previous;
+
+        // The data fields for the node - a key value pair
+        int key;
+        int value;
+    }
     
     int LRUcapacity;
 
