@@ -59,7 +59,10 @@ public class LRUCache {
     public LRUCache(int capacity) {
 
         this.LRUcapacity = capacity;
-        
+
+        // Connecting the head and tail of the DLL together as an LRU is initialised for the first time
+        head.next = tail;
+        tail.previous = head;
     }
 
     // Return the value of the key if the key exists, otherwise return -1.
