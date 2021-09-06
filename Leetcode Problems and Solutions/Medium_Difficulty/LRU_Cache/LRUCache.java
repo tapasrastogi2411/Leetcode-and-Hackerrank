@@ -20,6 +20,8 @@ package Medium_Difficulty.LRU_Cache;
 
 import java.util.HashMap;
 
+import jdk.internal.jimage.ImageReader.Node;
+
 public class LRUCache {
 
     // Definition of a doubly linked list node - where each node has two pointers, next and previous and the data field is key and value pairs 
@@ -95,6 +97,30 @@ public class LRUCache {
     
     // Update the value of the key if the key exists. Otherwise, add the key-value pair to the cache. If the number of keys exceeds the capacity from this operation, evict the least recently used key.
     public void put(int key, int value) {
+
+        // Case 1,: The key already exists in the mapping, so we have to update the value of the key
+
+        if(mapping.containsKey(key)){
+
+            // If the key already exists in the LRU cache, then remove it from doubly Linked List and insert a new one key-value pair with the updated value
+            deleteNode(mapping.get(key));
+            
+            doublyLinkedListNode newNodeWithUpdtatedValues = new doublyLinkedListNode(key, value);
+            insertAthead(newNodeWithUpdtatedValues);
+        }
+
+        // Case 2: If you are trying to put a key-value in the LRU but the capacity is already full, then remove the LRU node and insert the new key-value pair
+
+        if(mapping.size() == LRUcapacity){
+
+            // Remove the LRU node
+            deleteNode(tail.previous);
+
+            // Add the new key-value pair node to the LRU at the head
+
+            doublyLinkedListNode newNodeToAdd = new doublyLinkedListNode(key, value);
+            insertAthead(newNodeToAdd);
+        }
         
     }
 
@@ -133,6 +159,7 @@ public class LRUCache {
 
         // Remove the key-node pair from the hashmap since it no longer is needed
         mapping.remove(nodeToDelete.key);
+        
     }
 
     public static void main(String[] args) {
