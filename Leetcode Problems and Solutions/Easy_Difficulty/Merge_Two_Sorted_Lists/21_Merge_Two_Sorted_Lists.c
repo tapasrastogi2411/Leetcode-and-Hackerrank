@@ -6,7 +6,18 @@ Leetcode problem number 21: Merge Two Sorted Lists: Merge two sorted linked list
 
 */
 
+#include <stdio.h>
+# include <stdlib.h>
+
 struct ListNode {
     int val;
     struct ListNode *next;
 };
+
+struct ListNode *initialiser(int nodeValue){
+
+    struct ListNode *newNode = (struct ListNode *)calloc(1, sizeof(struct ListNode*));
+
+    newNode -> val = nodeValue;
+    newNode -> next = NULL;
+}
