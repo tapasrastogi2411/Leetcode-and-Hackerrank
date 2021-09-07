@@ -21,3 +21,16 @@ struct ListNode *initialiser(int nodeValue){
     newNode -> val = nodeValue;
     newNode -> next = NULL;
 }
+
+struct ListNode *printList(struct ListNode *head){
+
+    struct ListNode *temp = head;
+
+    while(temp != NULL){
+
+        printf("%d ", temp -> val);
+
+        temp = temp -> next;
+    }
+    printf("\n");
+}
