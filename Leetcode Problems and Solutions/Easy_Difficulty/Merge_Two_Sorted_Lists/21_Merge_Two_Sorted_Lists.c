@@ -69,8 +69,24 @@ int main(){
     head1 = addAtHead(head1, head1Node2);
     head1 = addAtHead(head1, head1Node1);
 
-    printList(head1);
+    // Creating the second linked list
+    struct ListNode *head2 = NULL;
+
+    // Creating the nodes of the linked list
+    struct ListNode *head2Node1 = initialiser(1);
+    struct ListNode *head2Node2 = initialiser(3);
+    struct ListNode *head2Node3 = initialiser(4);
+
+    // Connecting these nodes together
+    head2 = addAtHead(head2, head2Node3);
+    head2 = addAtHead(head2, head2Node2);
+    head2 = addAtHead(head2, head2Node1);
+
+
     
+
+
+
     
 }
 
