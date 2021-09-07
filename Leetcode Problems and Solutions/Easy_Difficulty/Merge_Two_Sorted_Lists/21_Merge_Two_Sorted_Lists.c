@@ -34,3 +34,14 @@ struct ListNode *printList(struct ListNode *head){
     }
     printf("\n");
 }
+
+struct ListNode *addAtHead(struct ListNode *head, struct ListNode *nodeToAdd){
+
+    // Making the next pointer of nodeToAdd point to head
+
+    nodeToAdd -> next = head;
+
+    // nodeToAdd is our new head, so we return that
+
+    return nodeToAdd;
+}
