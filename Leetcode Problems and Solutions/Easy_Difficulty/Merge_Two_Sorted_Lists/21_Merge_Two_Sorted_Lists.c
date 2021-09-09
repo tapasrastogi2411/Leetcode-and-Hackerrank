@@ -65,7 +65,7 @@ struct ListNode *mergeTwoLists(struct ListNode *l1, struct ListNode *l2){
             struct ListNode *newMergedNode = initialiser(l1 -> val);
 
             // Connecting this newly created node to our merged list
-            dummy -> next = newMergedNode; // Instead of this, we just do a dummy -> next = l1
+            dummy -> next = newMergedNode; // Instead of this, we just do a dummy -> next = l1, since we have to add the l1 list node to the merged list
             
             // Moving along in the l1 list. A condition necessary for termination
             l1 = l1 -> next;
@@ -111,7 +111,34 @@ struct ListNode *mergeTwoLists(struct ListNode *l1, struct ListNode *l2){
 // Implementing a recursive method to this problem
 struct ListNode *mergeTwoListsRecursive(struct ListNode * l1, struct ListNode *l2){
 
-    return l1;
+    struct ListNode *mergedHead = initialiser(0);
+    struct ListNode *dummy = mergedHead;
+    
+    if (l1 == NULL){
+        
+        return l2;
+    }
+    
+    if(l2 == NULL){
+        
+        return l1;
+    }
+    
+    
+    if(l1 -> val < l2 -> val){
+        
+        dummy = l1;
+        dummy -> next = mergeTwoLists(l1 -> next, l2);
+    }
+    
+    else {
+        
+        dummy = l2;
+        dummy -> next = mergeTwoLists(l1, l2 -> next);
+    }
+    
+    return dummy;
+
 
 }
 
@@ -149,7 +176,7 @@ int main(){
 
     struct ListNode *mergedHead = NULL;
 
-    mergedHead = mergeTwoLists(head1, head2);
+    mergedHead = mergeTwoListsRecursive(head1, head2);
 
     printList(mergedHead);
     
