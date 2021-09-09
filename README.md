@@ -27,6 +27,7 @@ Problems that I have solved:
   9) [Reverse a Linked List](https://leetcode.com/problems/reverse-linked-list/)
   10) [Invert a Binary Tree](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Easy_Difficulty/Invert_Binary_Tree)
   11) [Maximum Subarray](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Easy_Difficulty/Maximum_SubArray)
+  12) [Merge Two Sorted Lists](https://github.com/tapasrastogi2411/Leetcode-and-Hackerrank/tree/main/Leetcode%20Problems%20and%20Solutions/Easy_Difficulty/Merge_Two_Sorted_Lists)
 
 - Medium Difficulty
 
