@@ -49,9 +49,48 @@ struct ListNode *addAtHead(struct ListNode *head, struct ListNode *nodeToAdd){
 // The main method that we have to implement
 struct ListNode *mergeTwoLists(struct ListNode *l1, struct ListNode *l2){
 
-    // TODO: Implement this correctly
-    return l1;
+    struct ListNode *mergedHead = initialiser(0);
+    struct ListNode *dummy = mergedHead;
+    
+    while(l1 != NULL && l2 != NULL){
+        
+        if(l1 -> val < l2 -> val){
+            
+            // The value that we will add to mergedHead is the value at l1
+            struct ListNode *newMergedNode = initialiser(l1 -> val);
+            dummy -> next = newMergedNode;
+            
+            l1 = l1 -> next;
+        
+        }
+        
+        
+        else {
+            
+            struct ListNode *newMergedNode = initialiser(l2 -> val);
+            dummy -> next = newMergedNode;
+            
+            l2 = l2 -> next;
+        }
+        
+        dummy = dummy -> next;
+            
+        }
+    
+    
+    if(l1 == NULL){
+        
+        dummy -> next = l2;
+    }
+    
+    if(l2 == NULL){
+        dummy -> next = l1;
+    }
+
+    return mergedHead -> next;
+    
 }
+
 
 int main(){
 
@@ -82,11 +121,13 @@ int main(){
     head2 = addAtHead(head2, head2Node2);
     head2 = addAtHead(head2, head2Node1);
 
+    // Calling the mergeTwoSortedLists method
 
-    
+    struct ListNode *mergedHead = NULL;
 
+    mergedHead = mergeTwoLists(head1, head2);
 
-
+    printList(mergedHead);
     
 }
 
