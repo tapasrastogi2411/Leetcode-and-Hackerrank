@@ -108,6 +108,13 @@ struct ListNode *mergeTwoLists(struct ListNode *l1, struct ListNode *l2){
     
 }
 
+// Implementing a recursive method to this problem
+struct ListNode *mergeTwoListsRecursive(struct ListNode * l1, struct ListNode *l2){
+
+    return l1;
+
+}
+
 
 int main(){
 
