@@ -65,7 +65,7 @@ struct ListNode *mergeTwoLists(struct ListNode *l1, struct ListNode *l2){
             struct ListNode *newMergedNode = initialiser(l1 -> val);
 
             // Connecting this newly created node to our merged list
-            dummy -> next = newMergedNode;
+            dummy -> next = newMergedNode; // Instead of this, we just do a dummy -> next = l1
             
             // Moving along in the l1 list. A condition necessary for termination
             l1 = l1 -> next;
@@ -79,7 +79,7 @@ struct ListNode *mergeTwoLists(struct ListNode *l1, struct ListNode *l2){
             struct ListNode *newMergedNode = initialiser(l2 -> val);
 
             // Add this node to the merged list
-            dummy -> next = newMergedNode;
+            dummy -> next = newMergedNode; // Instead of this, we can just do a dummy -> next = l2
             
             // Move along to the next node in the l2 list
             l2 = l2 -> next;
