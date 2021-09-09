@@ -114,6 +114,7 @@ struct ListNode *mergeTwoListsRecursive(struct ListNode * l1, struct ListNode *l
     struct ListNode *mergedHead = initialiser(0);
     struct ListNode *dummy = mergedHead;
     
+    // The base condition to stop recursion. Similar to what we should be doing when either of lists get exhausted before the other
     if (l1 == NULL){
         
         return l2;
@@ -124,19 +125,21 @@ struct ListNode *mergeTwoListsRecursive(struct ListNode * l1, struct ListNode *l
         return l1;
     }
     
-    
+    // If value at l1 is smaller that l2, we add the value at l1 to our merged List and go ahead in the linked list recursively, also going ahead in nodes in the l1 list
     if(l1 -> val < l2 -> val){
         
         dummy = l1;
         dummy -> next = mergeTwoLists(l1 -> next, l2);
     }
     
+    // Likewise for when the value at l2 is smaller than l1
     else {
         
         dummy = l2;
         dummy -> next = mergeTwoLists(l1, l2 -> next);
     }
     
+    // return the head of the mergedList we just formed
     return dummy;
 
 
