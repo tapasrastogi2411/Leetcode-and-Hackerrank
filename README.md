@@ -11,6 +11,7 @@ Leetcode Profile: https://leetcode.com/tapas_rastogi/
 Problems that I am currently working on
 - Search in Rotated Sorted Array - Medium Difficulty
 - Coin Change - Medium Difficulty
+- Longest Increasing Subsquence - Medium Difficulty
 
 Problems that I have solved: 
 
