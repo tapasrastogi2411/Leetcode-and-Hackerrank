@@ -8,7 +8,7 @@ A subsequence is a sequence that can be derived from an array by deleting some o
 '''
 
 from typing import List
-
+# Use fynamic programming for this question
 def lengthLIS(nums: List[int]) -> int:
 
     pass
