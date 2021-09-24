@@ -12,6 +12,7 @@ Problems that I am currently working on
 - Search in Rotated Sorted Array - Medium Difficulty
 - Coin Change - Medium Difficulty
 - Longest Increasing Subsquence - Medium Difficulty
+- Maximum Product Subarray - Medium Difficulty
 
 Problems that I have solved: 
 
