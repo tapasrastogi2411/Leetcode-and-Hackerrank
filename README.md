@@ -8,13 +8,19 @@ Most of the problems have a python solution, with some of the data strcuture rel
 
 Leetcode Profile: https://leetcode.com/tapas_rastogi/
 
-Problems that I am currently working on
+### Leetcode Summary
+
+![image](https://user-images.githubusercontent.com/56613320/134756521-0ef8fe0b-554a-4801-bdba-be05ece0709c.png)
+
+### Problems that I am currently working on
+
 - Search in Rotated Sorted Array - Medium Difficulty
 - Coin Change - Medium Difficulty
 - Longest Increasing Subsquence - Medium Difficulty
 - Maximum Product Subarray - Medium Difficulty
 
-Problems that I have solved: 
+
+### Problems that I have solved: 
 
 - Easy Difficulty
 
