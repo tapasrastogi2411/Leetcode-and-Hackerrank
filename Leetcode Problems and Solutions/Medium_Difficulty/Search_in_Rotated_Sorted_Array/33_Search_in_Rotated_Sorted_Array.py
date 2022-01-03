@@ -15,6 +15,10 @@ A mapping of digit to letters (just like on the telephone buttons) is given belo
 
 from typing import List, Tuple, Dict
 
+'''Since we have to do this in logarithmic time and we have an almost sorted array, think of doing a binary search for this problem. We know that this array was originally sorted, so can we use this to our advantage?
+
+Since we have rotated an already sorted array, we have two halves which are on their own already sorted
+ '''
 def search(nums: List[int], target: int) -> int:
     pass
 
