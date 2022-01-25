@@ -1,6 +1,6 @@
 # Leetcode-and-Hackerrank
 
-A place where I put solutions to all the Leetcode and Hackerrank problems that I solve
+A place where I put solutions to all the Leetcode and Hackerrank problems that I solve 
 
 All solutions will be either in Python, Java or C or a combination of the three
 
