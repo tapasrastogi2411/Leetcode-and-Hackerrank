@@ -18,6 +18,7 @@ Leetcode Profile: https://leetcode.com/tapas_rastogi/
 - Coin Change - Medium Difficulty
 - Longest Increasing Subsquence - Medium Difficulty
 - Maximum Product Subarray - Medium Difficulty
+- Jump Game - Medium Difficulty
 
 
 ### Problems that I have solved: 
