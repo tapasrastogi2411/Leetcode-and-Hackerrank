@@ -19,7 +19,7 @@ Leetcode Profile: https://leetcode.com/tapas_rastogi/
 - Longest Increasing Subsquence - Medium Difficulty
 - Maximum Product Subarray - Medium Difficulty
 - Jump Game - Medium Difficulty
-
+- First and last position in sorted array - Medium Difficulty
 
 ### Problems that I have solved: 
 
