@@ -10,7 +10,7 @@ Leetcode Profile: https://leetcode.com/tapas_rastogi/
 
 ### Leetcode Summary
 
-![image](https://user-images.githubusercontent.com/56613320/134756521-0ef8fe0b-554a-4801-bdba-be05ece0709c.png)
+![image](https://user-images.githubusercontent.com/56613320/160323757-84ad7f07-2845-4792-94eb-fea4fa74be6c.png)
 
 ### Problems that I am currently working on
 
@@ -18,7 +18,8 @@ Leetcode Profile: https://leetcode.com/tapas_rastogi/
 - Coin Change - Medium Difficulty
 - Longest Increasing Subsquence - Medium Difficulty
 - Maximum Product Subarray - Medium Difficulty
-
+- Jump Game - Medium Difficulty
+- First and last position in sorted array - Medium Difficulty
 
 ### Problems that I have solved: 
 
